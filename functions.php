@@ -568,7 +568,7 @@ function aggregation_rss_func( $atts, $content = null ){
     $itemdivide = $items / 5;
     $itemround = round($itemdivide);
     $adposition = range(2, $items, $itemround);
-    $adfiles = range(1,5);
+    $adfiles = range(1,3);
     shuffle($adfiles);
     
     $rss = fetch_feed( $urls );
@@ -689,7 +689,7 @@ function aggregation_rss_func( $atts, $content = null ){
                                     $output .= '';
                                 }
                                 if ($date == 'true' && $time) {
-                                    $output .= '<span class="post_item_date">' . sprintf( __( 'Published: %s', 'wp-rss-retriever' ), $time ) . '</span>';
+                                    $output .= '<span class="post_item_date">' . sprintf( __( '%s', 'wp-rss-retriever' ), $time ) . '</span>';
                                 }
                             $output .= '</div>';
                         }
