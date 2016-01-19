@@ -509,7 +509,7 @@ if ( user_can( $current_user, "subscriber" ) && ! '/wp-admin/admin-ajax.php' != 
 } 
 
 // Custom Login Styles
-if(is_plugin_active('bbpress/bbpress.php')) {
+/*if(is_plugin_active('bbpress/bbpress.php')) {
     if(get_field('wpdev_logo', 'options')) {
     function wpdev_login_logo() { 
         $maincolor = get_field('wpdev_main_color', 'options');?>
@@ -532,7 +532,7 @@ if(is_plugin_active('bbpress/bbpress.php')) {
 <?php }
     }
 add_action( 'login_enqueue_scripts', 'wpdev_login_logo' );
-}
+}*/
 
 /**
  * Aggregation Shortcode
@@ -568,7 +568,7 @@ function aggregation_rss_func( $atts, $content = null ){
     $itemdivide = $items / 5;
     $itemround = round($itemdivide);
     $adposition = range(2, $items, $itemround);
-    $adfiles = range(1,3);
+    $adfiles = range(1,5);
     shuffle($adfiles);
     
     $rss = fetch_feed( $urls );
