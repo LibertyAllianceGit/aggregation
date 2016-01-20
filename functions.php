@@ -2323,4 +2323,4 @@ function wpdev_remove_menus(){
   remove_menu_page( 'edit.php?post_type=acf-field-group' );                  // ACF
   
 }
-add_action( 'admin_menu', 'wpdev_remove_menus' );
+//add_action( 'admin_menu', 'wpdev_remove_menus' );
