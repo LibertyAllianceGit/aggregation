@@ -4,7 +4,7 @@ Theme URI: http://wpdevelopers.com
 Author: Tyler Johnson
 Author URI: http://tylerjohnsondesign.com
 Description: A theme for aggregating articles from different news sources.
-Version: 1.1.5
+Version: 1.1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: aggregation
@@ -812,6 +812,8 @@ ul.post_item_list {
 	display: inline-block;
 	height: auto !important;
 	margin: 0 10px 0 0;
+	overflow: hidden;
+	max-height: 100px;
 }
 .post_item_image img {
 	display: inline-block;
@@ -937,8 +939,8 @@ ul.dsq-widget-list {
 .ad-homepage-336x280 {
 	margin: 14px 0 4px;
 	-moz-box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
-    box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
+	box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
 }
 .ad-homepage-336x280 div, .ad-homepage-336x280 div div, .ad-homepage-336x280 iframe, .ad-homepage-336x280 ins {
 	margin: 0 auto;
