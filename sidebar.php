@@ -14,9 +14,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <div class="col-md-4">
     <aside id="secondary" class="widget-area" role="complementary">
         <?php dynamic_sidebar( 'sidebar-1' ); ?>
-    	<?php get_template_part('template-parts/ad-1'); ?>
     	<?php get_template_part('template-parts/ad-2'); ?>
+        <?php echo do_shortcode('[disqus-latest]'); ?>
     	<?php get_template_part('template-parts/ad-3'); ?>
     	<?php get_template_part('template-parts/ad-4'); ?>
+    	<?php get_template_part('template-parts/ad-5'); ?>
     </aside><!-- #secondary -->
 </div>
