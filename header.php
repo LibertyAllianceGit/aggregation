@@ -69,7 +69,8 @@
         <div class="container-fluid aggregation-menu-cont">
             <div class="container aggregation-menu">
                 <nav id="site-navigation" class="main-navigation" role="navigation">
-                    <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false"><i class="fa fa-bars"></i> <?php esc_html_e( 'Menu', 'aggregation' ); ?></button><?php wp_nav_menu( array( 'theme_location' => 'mainmenu', 'menu_id' => 'main-menu' ) ); ?>
+                    <?php /*?><button class="menu-toggle" aria-controls="main-menu" aria-expanded="false"><i class="fa fa-bars"></i> <?php esc_html_e( 'Menu', 'aggregation' ); ?></button><?php */?>
+					<?php wp_nav_menu( array( 'theme_location' => 'mainmenu', 'menu_id' => 'main-menu' ) ); ?>
                 </nav><!-- #site-navigation -->
             </div>
         </div>

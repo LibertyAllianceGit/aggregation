@@ -27,6 +27,9 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+    
+    	<?php get_template_part('template-parts/ad-5'); ?>
+        
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */

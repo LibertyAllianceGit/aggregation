@@ -610,11 +610,10 @@ function aggregation_rss_func( $atts, $content = null ){
                     $output .= '<li class="post_item_item"><div class="post_item_item_wrapper">';
                         //random thumbnail
                         $randnums = range(1,$items);
-                        $maxnums = $items * 0.2;
+                        $maxnums = $items * 0.5;
                         shuffle($randnums);
                         $maximumnums = round($maxnums);
                         $arraynums = array_slice($randnums, 0, $maximumnums);
-    
     
                         if ($randomthumbnail != 'false' && $enclosure && in_array($postcount, $arraynums)) {
                             $thumbnail_image = $enclosure->get_thumbnail();                     
@@ -623,6 +622,7 @@ function aggregation_rss_func( $atts, $content = null ){
                                 $resize = aggregation_rss_resize_thumbnail($thumbnail);
                                 $class = aggregation_rss_get_image_class($thumbnail_image);
                                 $output .= '<div class="post_item_image"' . $resize . '><a ' . $newWindowOutput . ' href="' . esc_url( $item->get_permalink() ) . '"><img' . $class . ' src="' . $thumbnail_image . '" alt="' . $title . '"></a></div>';
+                            $hasrandthumbnail = 'wpdev-has-thumb';
                             } else {
                                 //if not than find and use first image in content
                                 preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $content, $first_image);
@@ -630,9 +630,9 @@ function aggregation_rss_func( $atts, $content = null ){
                                     $resize = aggregation_rss_resize_thumbnail($thumbnail);                                
                                     $class = aggregation_rss_get_image_class($first_image["src"]);
                                     $output .= '<div class="post_item_image"' . $resize . '><a ' . $newWindowOutput . ' href="' . esc_url( $item->get_permalink() ) . '"><img' . $class . ' src="' . $first_image["src"] . '" alt="' . $title . '"></a></div>';
+                            $hasrandthumbnail = 'wpdev-has-thumb';
                                 }
                             }
-                            $hasrandthumbnail = 'wpdev-has-thumb';
                         } else {
                             $hasrandthumbnail = '';
                         }
