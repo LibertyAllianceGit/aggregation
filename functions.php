@@ -410,6 +410,12 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'site-settings',
 	));
     
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Advertisements',
+		'menu_title'	=> 'Advertisements',
+		'parent_slug'	=> 'site-settings',
+	));
+    
 }
 
 /**
@@ -507,32 +513,6 @@ if ( user_can( $current_user, "subscriber" ) && ! '/wp-admin/admin-ajax.php' != 
     show_admin_bar(false);
     wp_redirect( '/forums/user/' .  $current_user->user_login );
 } 
-
-// Custom Login Styles
-/*if(is_plugin_active('bbpress/bbpress.php')) {
-    if(get_field('wpdev_logo', 'options')) {
-    function wpdev_login_logo() { 
-        $maincolor = get_field('wpdev_main_color', 'options');?>
-    <style type="text/css">
-        .login h1 a {
-            background-image: url(<?php echo get_field('wpdev_logo', 'options'); ?>);
-            padding-bottom: 30px;
-            background-size: contain;
-            width: 100%;
-            height: auto;
-        }
-        .wp-core-ui .button-primary {
-            background: <?php echo $maincolor; ?> !important;
-            border: none;
-            font-weight: 900 !important;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-    </style>
-<?php }
-    }
-add_action( 'login_enqueue_scripts', 'wpdev_login_logo' );
-}*/
 
 /**
  * Aggregation Shortcode
@@ -764,6 +744,135 @@ function aggregation_rss_resize_thumbnail($thumbnail) {
  */
 
 if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_56a28a103e565',
+	'title' => 'Advertisements',
+	'fields' => array (
+		array (
+			'key' => 'field_56a28a160e004',
+			'label' => 'Ad Slot 1',
+			'name' => 'wpdev_ad_slot_1',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_56a28a340e005',
+			'label' => 'Ad Slot 2',
+			'name' => 'wpdev_ad_slot_2',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_56a28a3a0e006',
+			'label' => 'Ad Slot 3',
+			'name' => 'wpdev_ad_slot_3',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_56a28a3e0e007',
+			'label' => 'Ad Slot 4',
+			'name' => 'wpdev_ad_slot_4',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+		array (
+			'key' => 'field_56a28a440e008',
+			'label' => 'Ad Slot 5',
+			'name' => 'wpdev_ad_slot_5',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+			'readonly' => 0,
+			'disabled' => 0,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-advertisements',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
 
 acf_add_local_field_group(array (
 	'key' => 'group_5671d6d91b3af',
@@ -2314,6 +2423,7 @@ acf_add_local_field_group(array (
 ));
 
 endif;
+
 
 /**
  * Hide ACF Menu Item

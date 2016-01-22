@@ -2,7 +2,7 @@
 
 Requires at least: 4.0
 Tested up to: 4.4.1
-Stable tag: 1.0.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,11 @@ Hello there! I'm a custom theme for Liberty Alliance, LLC, called Aggregation. I
 Aggregation includes support for Infinite Scroll in Jetpack and Advanced Custom Fields Pro.
 
 == Changelog ==
+
+= 1.2.0 - January 22, 2016 =
+* Added Advertisements Panel for Ad Output
+* Tweaked Style Settings
+* Tweaked Functions File for Better Speed
 
 = 1.1.0 - January 8 2016 =
 * Merged ACF options into functions.php
