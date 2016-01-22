@@ -26,6 +26,9 @@ Aggregation includes support for Infinite Scroll in Jetpack and Advanced Custom 
 
 == Changelog ==
 
+= 1.2.1 - January 22, 2016 =
+* Changed Ad Input from Text Input to Textarea.
+
 = 1.2.0 - January 22, 2016 =
 * Added Advertisements Panel for Ad Output
 * Tweaked Style Settings

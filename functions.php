@@ -753,7 +753,7 @@ acf_add_local_field_group(array (
 			'key' => 'field_56a28a160e004',
 			'label' => 'Ad Slot 1',
 			'name' => 'wpdev_ad_slot_1',
-			'type' => 'text',
+			'type' => 'textarea',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -764,9 +764,9 @@ acf_add_local_field_group(array (
 			),
 			'default_value' => '',
 			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
 			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => 'wpautop',
 			'readonly' => 0,
 			'disabled' => 0,
 		),
@@ -774,7 +774,7 @@ acf_add_local_field_group(array (
 			'key' => 'field_56a28a340e005',
 			'label' => 'Ad Slot 2',
 			'name' => 'wpdev_ad_slot_2',
-			'type' => 'text',
+			'type' => 'textarea',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -785,9 +785,9 @@ acf_add_local_field_group(array (
 			),
 			'default_value' => '',
 			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
 			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => 'wpautop',
 			'readonly' => 0,
 			'disabled' => 0,
 		),
@@ -795,7 +795,7 @@ acf_add_local_field_group(array (
 			'key' => 'field_56a28a3a0e006',
 			'label' => 'Ad Slot 3',
 			'name' => 'wpdev_ad_slot_3',
-			'type' => 'text',
+			'type' => 'textarea',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -806,9 +806,9 @@ acf_add_local_field_group(array (
 			),
 			'default_value' => '',
 			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
 			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => 'wpautop',
 			'readonly' => 0,
 			'disabled' => 0,
 		),
@@ -816,7 +816,7 @@ acf_add_local_field_group(array (
 			'key' => 'field_56a28a3e0e007',
 			'label' => 'Ad Slot 4',
 			'name' => 'wpdev_ad_slot_4',
-			'type' => 'text',
+			'type' => 'textarea',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -827,9 +827,9 @@ acf_add_local_field_group(array (
 			),
 			'default_value' => '',
 			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
 			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => 'wpautop',
 			'readonly' => 0,
 			'disabled' => 0,
 		),
@@ -837,7 +837,7 @@ acf_add_local_field_group(array (
 			'key' => 'field_56a28a440e008',
 			'label' => 'Ad Slot 5',
 			'name' => 'wpdev_ad_slot_5',
-			'type' => 'text',
+			'type' => 'textarea',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -848,9 +848,9 @@ acf_add_local_field_group(array (
 			),
 			'default_value' => '',
 			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
 			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => 'wpautop',
 			'readonly' => 0,
 			'disabled' => 0,
 		),
@@ -2424,7 +2424,6 @@ acf_add_local_field_group(array (
 
 endif;
 
-
 /**
  * Hide ACF Menu Item
  */
@@ -2433,4 +2432,4 @@ function wpdev_remove_menus(){
   remove_menu_page( 'edit.php?post_type=acf-field-group' );                  // ACF
   
 }
-//add_action( 'admin_menu', 'wpdev_remove_menus' );
+add_action( 'admin_menu', 'wpdev_remove_menus' );
