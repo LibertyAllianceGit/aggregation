@@ -4,7 +4,7 @@ Theme URI: http://wpdevelopers.com
 Author: Tyler Johnson
 Author URI: http://tylerjohnsondesign.com
 Description: A theme for aggregating articles from different news sources.
-Version: 1.2.3
+Version: 1.2.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: aggregation
@@ -649,7 +649,13 @@ ul#main-menu {
 	display: inline-block;
 }
 ul#main-menu li a {
-	padding: 0.6rem 0.8rem 0.2rem;
+	/*padding: 0.6rem 0.8rem 0.2rem;*/
+    background: #ddd;
+    padding: 0px 8px;
+    margin: 0 4px 4px 0;
+	-webkit-border-radius: 2px; 
+	-moz-border-radius: 2px; 
+	border-radius: 2px;
 }
 ul#main-menu > li.menu-item.menu-item-has-children > a:after {
 	content: "\f107";
@@ -669,7 +675,7 @@ ul.sub-menu > li.menu-item.menu-item-has-children > a:after {
 }
 /* CONTENT */
 div#content {
-	margin-top: 2.5rem;
+	margin-top: .5rem;
 }
 /* FOOTER */
 .container.aggregation-footer {
@@ -1029,6 +1035,13 @@ span#subscription-toggle {
 	float: none;
 	text-align: center;
 	border: solid 1px #eee;
+}
+}
+ @media screen and (max-width: 786px) {
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+	width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 }
  @media screen and (max-width: 767px) {
