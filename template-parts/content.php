@@ -28,7 +28,7 @@
 
 	<div class="entry-content">
     
-    	<?php get_template_part('template-parts/ad-5'); ?>
+    	<?php get_template_part('template-parts/ad-1'); ?>
         
 		<?php
 			the_content( sprintf(

@@ -32,5 +32,16 @@
 
 <?php wp_footer(); ?>
 
+<!-- START Quantcast Tag, part 2 of 2 -->
+<script type="text/javascript">
+    _qevents.push( { qacct:"p-52ePUfP6_NxQ_"} );
+</script>
+<noscript>
+    <div style="display: none;">
+        <img src="//pixel.quantserve.com/pixel/p-52ePUfP6_NxQ_.gif" height="1" width="1" alt="Quantcast"/>
+    </div>
+</noscript>
+<!-- END Quantcast Tag, part 2 of 2 -->
+
 </body>
 </html>

@@ -18,6 +18,22 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+
+<!-- START Quantcast Tag, part 1 of 2 -->
+<script type="text/javascript">
+    var _qevents = _qevents || [];
+    (function() {
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge")  
+                    + ".quantserve.com/quant.js";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem, scpt);  
+    })();
+</script>
+<!-- END Quantcast Tag, part 1 of 2 -->
+
 </head>
 
 <body <?php body_class(); ?>>
