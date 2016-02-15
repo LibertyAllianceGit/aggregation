@@ -4,7 +4,7 @@ Theme URI: http://wpdevelopers.com
 Author: Tyler Johnson
 Author URI: http://tylerjohnsondesign.com
 Description: A theme for aggregating articles from different news sources.
-Version: 1.2.15
+Version: 1.2.16
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: aggregation
@@ -684,6 +684,14 @@ ul.sub-menu > li.menu-item.menu-item-has-children > a:after {
 div#content {
 	margin-top: .5rem!important;
 }
+.col-md-12, .row, .container, .container-fluid {
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+.row {
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
 /* FOOTER */
 .container.aggregation-footer {
 	padding: 1.5rem 0;
@@ -815,7 +823,7 @@ a.wpdev-social-icon.wpdev-youtube {
 }
 /* HOMEPAGE AGGREGATION */
 .post_item_item {
-	width: 336px;
+	width: 320px;
 	margin: 10px;
 	float: left;
 }
@@ -831,14 +839,17 @@ ul.post_item_list {
 	width: 30%;
 	display: inline-block;
 	height: auto !important;
-	margin: 0 10px 0 0;
+	margin: 0 9px 0 0;
 	overflow: hidden;
-	max-height: 100px;
+	max-height: 81px;
 }
 .post_item_image img {
 	display: inline-block;
-	width: 100%;
-	border: 1px solid rgba(0,0,0,0.2);
+    width: 150%;
+    border: 1px solid rgba(0,0,0,0.2);
+    max-width: 150%;
+    left: -20%;
+    position: relative;
 }
 .post_item_readmore_cont {
 	margin: 1rem 0 0.5rem;
@@ -959,23 +970,32 @@ ul.dsq-widget-list {
 	padding: 0;
 }
 /* AD SETTINGS */
-.ad-homepage-336x280 {
-	margin: 14px 0 4px;
-	-moz-box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
-	-webkit-box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
-	box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
-	height: 280px;
-	text-align: center;
-	clear: both;
+.ad-336x280 {
+	margin: 14px 0 4px -10px;
+    -moz-box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0px 1px rgba(0,0,0,0.1);
+    width: 336px;
+    height: 280px;
+    text-align: center;
+    clear: both;
 }
-.ad-homepage-336x280 div, .ad-homepage-336x280 div div, .ad-homepage-336x280 iframe, .ad-homepage-336x280 ins {
+.ad-336x280-nativeads {
+    width: 100%;
+    min-height: 336px;
+    clear: both;
+}
+.ad-336x280 div, .ad-336x280 div div, .ad-336x280 iframe, .ad-336x280 ins {
 	margin: 0 auto;
 	text-align: center;
 }
-.single article .ad-homepage-336x280 {
+.single article .ad-336x280 {
 	margin: 2px 12px 0 0;
 	float: left;
 	clear: none;
+}
+#secondary .ad-336x280, #secondary .ad-336x280-nativeads {
+	margin: 0;
 }
 .rc-wc .row-item h3 {
     font-size: 12px;
@@ -1037,7 +1057,7 @@ span#subscription-toggle {
  @media screen and (max-width: 1178px) {
 }
  @media screen and (max-width: 991px) {
-.single article .ad-homepage-336x280 {
+.single article .ad-336x280 {
 	margin: 0 auto 10px;
 	float: none;
 	text-align: center;
