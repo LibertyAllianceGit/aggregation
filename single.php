@@ -20,7 +20,8 @@ get_header(); ?>
                     the_post_navigation();
 
 						echo do_shortcode('[wpdevfb]');
-                        comments_template();
+						echo do_shortcode('[js-disqus]');
+                        // comments_template();
 
                 endwhile; // End of the loop.
                 ?>
